@@ -22,6 +22,11 @@ Docker
 4. Ubuntuターミナルを起動
 5. ```docker compose up -d``` を実行
 
+## デプロイ時
+1. nodeコンテナに入る```docker compose exec node bash```
+2. プロダクションモードでCSSをビルド（未使用のクラスを削除）
+```NODE_ENV=production npx tailwindcss -o ./dist/output.css --minify```
+
 ## 【参考】
 https://www.kagoya.jp/howto/cloud/container/wsl2_docker/
 
