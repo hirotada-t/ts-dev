@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "outDir": "./js",
+    "module": "ESNext",
+    "target": "ESNext",
+    "strict": true
+  },
+  "include": ["ts/**/*"]
+}
