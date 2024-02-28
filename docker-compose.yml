@@ -3,15 +3,15 @@ services:
   php:
     image: php:8.1.22-apache
     volumes:
-      - ./src:/var/www/html
+      - ./app/src:/var/www/html
     ports:
       - "8080:80"
   
   node:
     image: node:20.11.1-slim
     volumes:
-      - ./src:/app
-      - /src/node_modules
+      - ./app:/app
+      - /app/node_modules
     working_dir: /app
     command: sh -c "npm install && npx tsc -w"
     depends_on:
